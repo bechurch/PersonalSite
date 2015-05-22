@@ -7,6 +7,8 @@ var parse = require('co-body');
 var nodemailer = require('nodemailer');
 var validator = require("email-validator");
 var config = require('./config')
+var views = require("co-views");
+var render = views("public", { map: { html: 'swig' }});
 
 
 // create reusable transporter object using SMTP transport
@@ -47,6 +49,18 @@ app.use(route.post('/', function *(next) {
     }
 
     this.redirect('/');
+}));
+
+app.use(route.get('/Cabins', function *() {
+ this.body = yield render('hillside/index');
+}));
+
+app.use(route.get('/FlappyCanmore', function *() {
+    this.body = yield render('canmore/index');
+}));
+
+app.use(route.get('/SunWatch', function *() {
+    this.body = yield render('sun_watch/index');
 }));
 
 
