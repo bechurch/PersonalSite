@@ -50,6 +50,6 @@ app.use(route.post('/', function *(next) {
 }));
 
 
-var server = app.listen(4000, function () {
+var server = app.listen(config.port, function () {
     console.log('Listening on port %d', server.address().port);
 });
