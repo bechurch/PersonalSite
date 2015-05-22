@@ -1,0 +1,23 @@
+{
+  "name": "ben-personal-site",
+  "version": "1.0.0",
+  "description": "my personal site",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "supervisor server.js",
+    "reload": "supervisor livereload.js"
+  },
+  "author": "ben",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.4",
+    "co-body": "^2.0.0",
+    "email-validator": "^1.0.1",
+    "jquery": "^2.1.4",
+    "koa": "^0.20.0",
+    "koa-common": "^1.2.0",
+    "koa-route": "^2.4.1",
+    "nodemailer": "^1.3.4"
+  }
+}

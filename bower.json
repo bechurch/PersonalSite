@@ -1,0 +1,22 @@
+{
+  "name": "ben-personal-site",
+  "version": "0.0.0",
+  "authors": [
+    "bechurch <ben.douglas.church@gmail.com>"
+  ],
+  "description": "my personal site",
+  "main": "server.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "react": "~0.13.3",
+    "bootstrap": "~3.3.4"
+  }
+}

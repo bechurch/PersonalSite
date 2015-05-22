@@ -1,0 +1,247 @@
+/*!
+ * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+
+.topnav {
+    font-size: 14px;
+}
+
+.orange {
+    color: #f5a765;
+}
+
+.highlight {
+    /*color: #6499b8;*/
+    color: #f5a765;
+
+}
+
+.down-arrow{
+    position: absolute;
+    color: white;
+    padding: 25px;
+}
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: none; /* no underline */
+
+}
+
+a:hover {
+    color: #6499b8; /* blue colors for links too */
+    text-decoration: none; /* no underline */
+}
+
+
+
+.mountain {
+    background: url(../img/overlap.png) no-repeat center center;
+    background-size: cover;
+    padding-top: 275px;
+}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    /*background: url(../img/intro-bg.jpg) no-repeat center center;*/
+    /*background-size: cover;*/
+}
+
+.work-header {
+    padding-top: 40px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 20px;
+    text-align: center;
+    color: #f8f8f8;
+    /*background: url(../img/intro-bg.jpg) no-repeat center center;*/
+    /*background-size: cover;*/
+}
+.intro-row {
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 20%;
+}
+
+.intro-message {
+    font-weight: 100;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    /*text-shadow: 2px 2px 3px rgba(0,0,0,0.6);*/
+    font-size: 5em;
+    font-weight:100;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    /*border-bottom: 1px solid rgba(0,0,0,0.2);*/
+}
+
+.intro-message > h3 {
+    /*text-shadow: 2px 2px 3px rgba(0,0,0,0.6);*/
+    font-weight: 100;
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.about-me {
+    /*padding: 50px 0;*/
+    background-color: white;
+    padding: 10px 50px 50px 50px;
+    color: dimgray;
+
+}
+
+
+.work {
+    padding: 50px 0;
+    /*background-color: dimgray;*/
+    /*background-image: url('../img/stardust.png');*/
+    color: white;
+    /*border-top: 1px solid #f5a765;*/
+}
+
+.work h2 {
+    text-align: right;
+}
+
+.current-work {
+    padding: 50px;
+}
+
+.section-heading {
+    margin-bottom: 10px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 300px;
+    border-top: 3px solid #f5a765;
+}
+
+.contact {
+    /*background-color: dimgray;*/
+    background-image: url('../img/wall_sit.jpeg');
+    background-size: cover;
+    padding: 50px;
+
+}
+
+.translucent {
+    background-color: rgba(105, 105, 105, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #f8f8f8;
+}
+
+p.copyright {
+    margin: 10px 0 0;
+}
+
+/*bootstrap over rides*/
+.btn.outline {
+    background: none;
+    padding: 12px 22px;
+}
+
+.btn-primary.outline {
+    border: 1px solid #f8f8f8;
+    color: #f8f8f8;
+}
+
+/*extra*/
+.padding-top-20{
+    padding-top: 20px;
+}
+
+.padding-top-50{
+    padding-top: 50px;
+}
+
+.padding-top-75{
+    padding-top: 75px;
+}
+
+.padding-top-100{
+    padding-top: 100px;
+}
+
+
+.padding-bottom-20{
+    padding-bottom: 20px;
+}
+
+.padding-bottom-50{
+    padding-bottom: 50px;
+}
+
+.padding-bottom-75{
+    padding-bottom: 75px;
+}
+
+.padding-bottom-100{
+    padding-bottom: 100px;
+}
