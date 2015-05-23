@@ -9,7 +9,12 @@ var validator = require("email-validator");
 var config = require('./config')
 var views = require("co-views");
 var render = views("public", { map: { html: 'swig' }});
+var path = require('path');
+var staticCache = require('koa-static-cache')
 
+app.use(staticCache(path.join(__dirname, 'public'), {
+    maxAge: 10 * 24 * 60 * 60
+}));
 
 // create reusable transporter object using SMTP transport
 var transporter = nodemailer.createTransport({
@@ -24,8 +29,11 @@ var transporter = nodemailer.createTransport({
 app.use(common.logger('dev'));
 
 // enable static middleware
-app.use(common.static(__dirname + '/public'));
+//app.use(common.static(__dirname + '/public'));
 
+app.use(route.get('/', function *() {
+    this.body = yield render('index');
+}));
 
 app.use(route.post('/', function *(next) {
     var form = yield parse(this);
