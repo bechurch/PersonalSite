@@ -55,7 +55,7 @@ a {
 }
 
 a:hover {
-    color: #6499b8; /* blue colors for links too */
+    color: #F5BB89; /* blue colors for links too */
     text-decoration: none; /* no underline */
 }
 
@@ -190,6 +190,10 @@ a:hover {
     background-color: rgba(105, 105, 105, 0.6);
     padding: 10px 20px;
     border-radius: 10px;
+}
+
+ul > ul {
+    padding: 0px 0px 0px 16px;
 }
 
 footer {
