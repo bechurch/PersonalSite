@@ -71,6 +71,10 @@ app.use(route.get('/SunWatch', function *() {
     this.body = yield render('sun_watch/index');
 }));
 
+app.use(route.get('/HackerSearch', function *() {
+    this.body = yield render('HackerSearch/index');
+}));
+
 
 var server = app.listen(config.port, function () {
     console.log('Listening on port %d', server.address().port);
