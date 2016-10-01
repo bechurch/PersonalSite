@@ -157,11 +157,6 @@
 
 	      this.setState({ id: id, loading: true, comments: [] });
 	      this.serverRequest = _jquery2.default.get('http://hn.algolia.com/api/v1/items/' + id, function (result) {
-	        /**
-	         * 
-	         * 
-	         * @param {any} x
-	         */
 	        var comments = result.children.filter(function (x) {
 	          return x.text;
 	        });
@@ -200,6 +195,8 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this3 = this;
+
 	      return _react2.default.createElement(
 	        _reactBootstrap.Grid,
 	        { className: 'hackerSearch' },
@@ -219,7 +216,9 @@
 	              'div',
 	              null,
 	              _react2.default.createElement(_keywordFilter2.default, { keywordsChanged: this.keywordsChanged.bind(this) }),
-	              _react2.default.createElement(_commentList2.default, { comments: this.state.comments, searchWords: this.state.searchWords })
+	              _react2.default.createElement(_commentList2.default, { refresh: function refresh() {
+	                  return _this3.loadThreadById(_this3.state.id);
+	                }, comments: this.state.comments, searchWords: this.state.searchWords })
 	            )
 	          ),
 	          _react2.default.createElement(_reactSpinkit2.default, { hidden: !this.state.loading, spinnerName: 'double-bounce', noFadeIn: true })
@@ -51328,6 +51327,17 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'comments' },
+	        _react2.default.createElement(
+	          _reactBootstrap.Badge,
+	          { className: 'commentCount refreshButton' },
+	          _react2.default.createElement(_reactBootstrap.Glyphicon, {
+	            className: 'glyphicon-white',
+	            glyph: 'refresh',
+	            onClick: function onClick() {
+	              return _this2.props.refresh();
+	            }
+	          })
+	        ),
 	        _react2.default.createElement(
 	          _reactBootstrap.Badge,
 	          { className: 'commentCount' },
