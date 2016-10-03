@@ -11,6 +11,10 @@ var views = require("co-views");
 var render = views("public", { map: { html: 'swig' }});
 var path = require('path');
 var staticCache = require('koa-static-cache')
+var winston = require('winston');
+winston.add(winston.transports.File, { filename: 'main.log' });
+winston.remove(winston.transports.Console);
+
 
 app.use(staticCache(path.join(__dirname, 'public'), {
     maxAge: 10 * 24 * 60 * 60
@@ -37,6 +41,7 @@ app.use(route.get('/', function *() {
 
 app.use(route.post('/', function *(next) {
     var form = yield parse(this);
+    winston.log('info', 'email attempt: %j', form, {});
     if (validator.validate(form.email) || !form.message) {
         var mailOptions = {
             from: form.name + ' <' + form.email + '>', // sender address
