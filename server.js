@@ -13,7 +13,6 @@ var path = require('path');
 var staticCache = require('koa-static-cache')
 var winston = require('winston');
 winston.add(winston.transports.File, { filename: 'main.log' });
-winston.remove(winston.transports.Console);
 
 
 app.use(staticCache(path.join(__dirname, 'public'), {
